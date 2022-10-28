@@ -1,0 +1,45 @@
+header {
+    position:sticky;
+    top: 0;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.logotipo {
+    max-height: 25px;
+    width: 100%;
+}
+
+.inicia-sesion {
+    padding: 30px;
+}
+
+.registro {
+    padding-right: 120px;
+}
+
+.signUp {
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+
+}
+
+.form-control {
+
+    width: 400px;
+}
+
+.form-select {
+    width: 400px;
+}
+
+.group-pic {
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1000px;
+}

@@ -1,5 +1,6 @@
 
 showUser()
+editUser()
 let nameInput = document.getElementById("nameInput");
 let emailInput = document.getElementById("emailInput");
 let submitButton = document.getElementById("submitButton");
@@ -10,9 +11,6 @@ submitButton.addEventListener('click', e => {
     const nameInputValue = nameInput.value;
     const emailInputValue = emailInput.value;
     const levelSelectValue = levelSelect.value;
-
-
-
 
     if (nameInputValue) {
         let webUser = localStorage.getItem("localUser")
@@ -33,6 +31,7 @@ submitButton.addEventListener('click', e => {
         nameInput.value = "";
     }
     showUser()
+    editUser()
 });
 
 
@@ -51,11 +50,24 @@ function showUser() {
                     <td>${item.user} </td>
                     <td>${item.email} </td>
                     <td>${item.level} </td>
-                        <td><button type="button onclick="editUser(${index})" class="text-primary">Edit</button></td>
+                        <td><button type="button" onclick="editUser(${index})" class="text-primary">Edit</button></td>
 
-                        <td><button type="button onclick="editUser(${index})" class="text-danger">Delete</button></td>
+                        <td><button type="button" onclick="editUser(${index})" class="text-danger">Delete</button></td>
                     </tr>`;
     });
 
     addedUserList.innerHTML = html;
+}
+
+function editUser(index) {
+    let nameInput = document.getElementById("nameInput");
+    let submitButton = document.getElementById("submitButton");
+    let saveUserButton = document.getElementById("saveUserButton"); 
+    let userObject = JSON.parse(webUser);
+
+    nameInput.value = index;
+    emailInputValue = userObject [index]['user'];
+
+    submitButton.style.display="none;"
+    saveUserButton.style.diaplay="inline-block";
 }

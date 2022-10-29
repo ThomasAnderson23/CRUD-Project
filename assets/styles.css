@@ -43,3 +43,9 @@ header {
     margin-right: auto;
     padding-right: 1000px;
 }
+
+.footerimg {
+    float: left;
+    height: 60px;
+
+}
